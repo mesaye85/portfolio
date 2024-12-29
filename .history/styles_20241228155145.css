@@ -82,34 +82,20 @@ nav ul li a {
 }
 .skills-logos {
     display: flex;
-    flex-wrap: wrap; /* Allows logos to wrap to the next line if needed */
-    justify-content: center; /* Centers logos horizontally */
-    gap: 20px; /* Adds spacing between logos */
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.skills-logos a {
-    display: block;
-    width: 120px; /* Uniform width for all logos */
-    height: 80px; /* Uniform height for all logos */
-    background-color: #fff; /* Adds a white background to each logo */
-    border: 1px solid #ccc; /* Adds a light border to separate logos from the background */
-    border-radius: 8px; /* Adds rounded corners for a modern look */
-    overflow: hidden; /* Ensures logos fit within the container */
-    text-align: center; /* Centers the logo image inside the container */
-    padding: 10px; /* Adds internal spacing for non-centered logos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+.skills-logos img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s;
 }
 
-.skills-logos a img {
-    max-width: 100%; /* Ensures the image scales proportionally */
-    max-height: 100%; /* Ensures the image stays within the container */
-    object-fit: contain; /* Ensures the entire logo fits nicely */
-}
-
-.skills-logos a:hover {
-    transform: scale(1.1); /* Slightly enlarges the logo on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increases shadow depth on hover */
+.skills-logos img:hover {
+    transform: scale(1.1);
 }
 
 form {
