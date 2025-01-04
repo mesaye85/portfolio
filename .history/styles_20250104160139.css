@@ -1,13 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: rgb(9, 0, 16);
+    background: linear-gradient(to right, #6a11cb, #2575fc); 
     color: #fff;
-    min-height: 100vh; 
-    background-attachment: fixed; 
-    background-size: cover; 
 }
-
 
 .container {
     width: 90%;
@@ -21,8 +17,8 @@ header {
     padding: 50px 0;
 }
 a:hover {
-    color: #ff9e2c; 
-    transition: color 0.3s ease; 
+    color: #ff9e2c; /* Change to orange or your preferred color */
+    transition: color 0.3s ease; /* Smooth transition effect */
 }
 
 header h1 {
@@ -35,9 +31,9 @@ header p {
     margin-top: 10px;
 }
 ul {
-    list-style: none; 
-    padding: 0;       
-    margin: 0;        
+    list-style: none; /* Removes bullet points */
+    padding: 0;       /* Removes default padding */
+    margin: 0;        /* Removes default margin */
 }
 
 nav ul {
@@ -105,35 +101,35 @@ nav ul li a {
 }
 .skills-logos {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 20px; 
+    flex-wrap: wrap; /* Allows logos to wrap to the next line if needed */
+    justify-content: center; /* Centers logos horizontally */
+    gap: 20px; /* Adds spacing between logos */
 }
 
 .skills-logos a {
     display: block;
-    width: 120px; 
-    height: 80px; 
-    background-color: hsl(0, 0%, 100%); 
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    overflow: hidden; 
-    text-align: center; 
-    padding: 10px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    width: 120px; /* Uniform width for all logos */
+    height: 80px; /* Uniform height for all logos */
+    background-color: #fff; /* Adds a white background to each logo */
+    border: 1px solid #ccc; /* Adds a light border to separate logos from the background */
+    border-radius: 8px; /* Adds rounded corners for a modern look */
+    overflow: hidden; /* Ensures logos fit within the container */
+    text-align: center; /* Centers the logo image inside the container */
+    padding: 10px; /* Adds internal spacing for non-centered logos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
 .skills-logos a img {
-    max-width: 100%; 
-    max-height: 100%; 
-    object-fit: contain; 
+    max-width: 100%; /* Ensures the image scales proportionally */
+    max-height: 100%; /* Ensures the image stays within the container */
+    object-fit: contain; /* Ensures the entire logo fits nicely */
 }
 
 .skills-logos a:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-    opacity: 0.9; 
+    transform: scale(1.1); /* Slightly enlarges the logo on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increases shadow depth on hover */
+    opacity: 0.9; /* Slightly dims the logos on hover */
 }
 
 
@@ -174,7 +170,7 @@ footer {
 
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; 
+        flex-direction: column; /* Stack navigation items vertically */
         gap: 10px;
     }
 
@@ -183,7 +179,7 @@ footer {
     }
 
     .skills-logos a {
-        width: 80px; 
+        width: 80px; /* Adjust logo size for smaller screens */
         height: 60px;
     }
 }
@@ -191,7 +187,7 @@ footer {
     font-family: 'Font Awesome 6 Free';
     font-style: normal;
     font-weight: 400;
-    font-display: swap; 
+    font-display: swap; /* Ensures faster text rendering */
     src: url('path-to-font-file') format('woff2');
 }
 

@@ -9,8 +9,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     if (!isValidName(name) || !isValidEmail(email) || !isValidMessage(message)) {
         return;
     }
-    alert("JavaScript is running!");
-
+    
     // Add CSRF token
     const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
     
@@ -35,7 +34,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     .catch(error => {
         console.error('Error:', error);
         showError('An error occurred. Please try again later.');
-    });
 });
 
 function isValidEmail(email) {
@@ -62,28 +60,48 @@ function isValidMessage(message) {
     }
     return true;
 }
-// Wait for DOM content to load before running the script
-document.addEventListener("DOMContentLoaded", () => {
-    const text = "I am a passionate cybersecurity professional focused on threat hunting, forensics, cloud security, and AI/ML integration. This portfolio showcases my projects, certifications, and skills relevant to advanced cybersecurity roles.";
-    const speed = 50; // Typing speed in milliseconds
-    const target = document.getElementById("typewriter-text");
 
-    if (!target) {
-        console.error("Error: Element with ID 'typewriter-text' not found.");
-        return;
+class TypeWriter {
+    constructor(element, text, speed = 50) {
+        this.element = element;
+        this.text = text;
+        this.speed = speed;
+        this.isDeleting = false;
+        this.currentIndex = 0;
+        this.type();
     }
 
-    let i = 0;
-    function type() {
-        if (i < text.length) {
-            target.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
+    type() {
+        if (!this.element) {
+            console.error('Target element not found');
+            return;
+        }
+
+        const current = this.currentIndex % this.text.length;
+        const fullText = this.text[current];
+
+        if (this.isDeleting) {
+            this.element.textContent = fullText.substring(0, this.element.textContent.length - 1);
         } else {
-            target.style.whiteSpace = "normal";
-        }   
+            this.element.textContent = fullText.substring(0, this.element.textContent.length + 1);
+        }
+
+        let typeSpeed = this.speed;
+
+        if (this.isDeleting) {
+            typeSpeed /= 2;
+        }
+
+        if (!this.isDeleting && this.element.textContent === fullText) {
+            typeSpeed = this.speed * 5;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.element.textContent === '') {
+            this.isDeleting = false;
+            this.currentIndex++;
+            typeSpeed = this.speed;
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
     }
-
-    type();
+}
 });
-

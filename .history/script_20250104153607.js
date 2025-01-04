@@ -35,7 +35,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     .catch(error => {
         console.error('Error:', error);
         showError('An error occurred. Please try again later.');
-    });
 });
 
 function isValidEmail(email) {
@@ -79,9 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
             target.textContent += text.charAt(i);
             i++;
             setTimeout(type, speed);
-        } else {
-            target.style.whiteSpace = "normal";
-        }   
+        }
     }
 
     type();

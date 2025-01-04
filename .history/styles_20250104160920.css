@@ -1,13 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: rgb(9, 0, 16);
+    background: linear-gradient(to right, #2c0358, #041128); 
     color: #fff;
-    min-height: 100vh; 
-    background-attachment: fixed; 
-    background-size: cover; 
 }
-
 
 .container {
     width: 90%;
@@ -114,7 +110,7 @@ nav ul li a {
     display: block;
     width: 120px; 
     height: 80px; 
-    background-color: hsl(0, 0%, 100%); 
+    background-color: #fff; 
     border: 1px solid #ccc; 
     border-radius: 8px; 
     overflow: hidden; 

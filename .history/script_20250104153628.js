@@ -79,9 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
             target.textContent += text.charAt(i);
             i++;
             setTimeout(type, speed);
-        } else {
-            target.style.whiteSpace = "normal";
-        }   
+        }
     }
 
     type();

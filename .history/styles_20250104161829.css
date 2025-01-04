@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: rgb(9, 0, 16);
+    background: linear-gradient(135deg, #27024e 0%, #0d3478 50%, #1e3a8a 100%);
     color: #fff;
     min-height: 100vh; 
     background-attachment: fixed; 

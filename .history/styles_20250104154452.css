@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); 
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+a:hover {
+    color: #ff9e2c; /* Change to orange or your preferred color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;       /* Removes default padding */
+    margin: 0;        /* Removes default margin */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+.typewriter {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for typewriter effect */
+    color: rgb(211, 241, 211); /* Match the typewriter theme */
+    overflow-wrap: break-word; /* Allows breaking of long words */
+    word-wrap: break-word; /* Fallback for older browsers */
+    white-space: normal; /* Allows line wrapping */
+    animation: blink-caret 0.7s step-end infinite; /* Blinking caret animation */
+}
+
+#typewriter-text {
+    display: inline-block; /* Keeps the text inline */
+    border-right: 2px solid rgb(160, 161, 160); /* Cursor effect */
+    overflow: hidden; /* Hides overflowing text */
+    white-space: nowrap; /* Ensures the typing effect works */
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-right-color: transparent;
+    }
+    50% {
+        border-right-color: green;
+    }
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    margin: 10px 0;
+}
+
+.project p {
+    margin: 5px 0 15px;
+}
+.skills-logos {
+    display: flex;
+    flex-wrap: wrap; /* Allows logos to wrap to the next line if needed */
+    justify-content: center; /* Centers logos horizontally */
+    gap: 20px; /* Adds spacing between logos */
+}
+
+.skills-logos a {
+    display: block;
+    width: 120px; /* Uniform width for all logos */
+    height: 80px; /* Uniform height for all logos */
+    background-color: #fff; /* Adds a white background to each logo */
+    border: 1px solid #ccc; /* Adds a light border to separate logos from the background */
+    border-radius: 8px; /* Adds rounded corners for a modern look */
+    overflow: hidden; /* Ensures logos fit within the container */
+    text-align: center; /* Centers the logo image inside the container */
+    padding: 10px; /* Adds internal spacing for non-centered logos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.skills-logos a img {
+    max-width: 100%; /* Ensures the image scales proportionally */
+    max-height: 100%; /* Ensures the image stays within the container */
+    object-fit: contain; /* Ensures the entire logo fits nicely */
+}
+
+.skills-logos a:hover {
+    transform: scale(1.1); /* Slightly enlarges the logo on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increases shadow depth on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2575fc;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #6a11cb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .skills-logos a {
+        width: 100px;
+        height: 60px;
+    }
+}
