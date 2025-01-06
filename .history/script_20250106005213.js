@@ -61,7 +61,15 @@ function isValidMessage(message) {
     }
     return true;
 }
+document.querySelectorAll('.skill-box p').forEach((text) => {
+    const parent = text.parentElement;
+    const parentHeight = parent.offsetHeight;
 
+    if (text.scrollHeight > parentHeight) {
+        text.style.fontSize = '0.8em'; // Reduce font size if text overflows
+        text.style.lineHeight = '1.2'; // Adjust line height for better fit
+    }
+});
 
 });
 

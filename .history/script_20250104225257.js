@@ -62,7 +62,6 @@ function isValidMessage(message) {
     return true;
 }
 
-
 });
 
 

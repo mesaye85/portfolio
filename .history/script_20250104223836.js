@@ -35,6 +35,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     .catch(error => {
         console.error('Error:', error);
         showError('An error occurred. Please try again later.');
+    });
 });
 
 function isValidEmail(email) {
@@ -61,8 +62,25 @@ function isValidMessage(message) {
     }
     return true;
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const text = "I am a passionate cybersecurity professional focused on threat hunting, forensics, cloud security, and AI/ML integration. This portfolio showcases my projects, certifications, and skills relevant to advanced cybersecurity roles.";
+    const target = document.getElementById("typewriter-text");
+    const speed = 50; // Typing speed in milliseconds
 
+    let i = text.length - 1; // Start from the end for right-to-left effect
+    target.style.direction = "rtl"; // Ensure typing starts from right
 
+    function type() {
+        if (i >= 0) {
+            target.textContent = text.charAt(i) + target.textContent; // Prepend each character
+            i--;
+            setTimeout(type, speed);
+        } else {
+            setTimeout(() => target.classList.add("cursor-hidden"), 1000); // Hide the cursor 1 second after typing ends
+        }
+    }
+
+    type();
 });
 
 

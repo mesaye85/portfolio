@@ -1,0 +1,275 @@
+.baskervville-sc-regular {
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+    margin: 0;
+    font-family: "Baskervville SC", serif;
+    font-size: 1.1em;
+    background-image: url('background/background.jpg');
+    background-size: 150% 150%; 
+    color: #bae0c3;
+    min-height: 100vh; 
+    background-attachment: fixed; 
+    animation: gradient-shift 70s ease infinite;
+}
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.sree-krushnadevaraya-regular {
+    font-family: "Sree Krushnadevaraya", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+s  
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    
+}
+a:hover {
+    color: #ff9e2c; 
+    transition: color 0.3s ease; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+ul {
+    list-style: none; 
+    padding: 0;       
+    margin: 0;        
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bdecd0;
+    font-weight: bold;
+}
+
+.section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    padding: 20px; /* Inner padding */
+    margin: 20px auto; /* Space between cards */
+    max-width: 800px; /* Limit the card width */
+    text-align: center; /* Center-align content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Add more depth on hover */
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: #fff; /* White text for titles */
+}
+
+.card p {
+    color: #ddd; /* Light gray text for content */
+    line-height: 1.6; /* Improve readability */
+}
+
+.card a {
+    color: #ff9e2c; /* Accent color for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #ffd27f; /* Lighter hover color for links */
+}
+
+
+.btn-resume {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2D1B4E; /* Dark purple */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-resume:hover {
+    background-color: #FF69B4; /* Bright pink for hover effect */
+    color: #fff;
+}
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    margin: 10px 0;
+}
+
+.project p {
+    margin: 5px 0 15px;
+}
+
+.skills-logos {
+    display: grid; /* Use grid layout for alignment */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Center items within the grid */
+}
+
+.skills-logos div {
+    position: relative; /* Enable positioning for hover effects */
+    width: 150px; /* Set fixed box size */
+    height: 150px;
+    background-color: #222; /* Default background color */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center logo vertically */
+    justify-content: center; /* Center logo horizontally */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    overflow: hidden; /* Prevent content overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+}
+
+.skills-logos img {
+    width: 50px; /* Set logo size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.skills-logos p {
+    position: absolute; /* Position text inside the box */
+    bottom: 10px; /* Place text at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    font-size: 0.9em; /* Adjust font size */
+    color: #fff; /* Text color */
+    opacity: 0; /* Hide text initially */
+    pointer-events: none; /* Disable interaction when hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    text-align: center; /* Center-align text */
+}
+
+.skills-logos div:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Add a stronger shadow */
+    background-color: #444; /* Optional: change background color */
+}
+
+.skills-logos div:hover img {
+    transform: scale(0.9); /* Slightly shrink the logo */
+}
+
+.skills-logos div:hover p {
+    opacity: 1; /* Show the text */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8e8bf4;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #6a11cb;
+}
+.social-media {
+    color: rgba(23, 68, 231, 0.88);
+    font-size: 1.5em;
+
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(76, 5, 130, 0.285);
+    
+}
+
+@media (max-width: 768px) {
+    #about .container {
+        padding: 10px;
+        max-width: 90%; /* Adjusts width for smaller screens */
+    }
+
+    .typewriter {
+        font-size: 1em; /* Scales font for smaller devices */
+        line-height: 1.6;
+    }
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: url('path-to-font-file') format('woff2');
+}
+

@@ -1,0 +1,233 @@
+.baskervville-sc-regular {
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body {
+    margin: 0;
+    font-family: "Baskervville SC", serif;
+    font-size: 1.1em;
+    background: rgb(9, 0, 16);
+    background-size: 150% 150%; 
+    color: #bae0c3;
+    min-height: 100vh; 
+    background-attachment: fixed; 
+    animation: gradient-shift 10s ease infinite;
+}
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.sree-krushnadevaraya-regular {
+    font-family: "Sree Krushnadevaraya", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+s  
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+a:hover {
+    color: #ff9e2c; 
+    transition: color 0.3s ease; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+ul {
+    list-style: none; 
+    padding: 0;       
+    margin: 0;        
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bdecd0;
+    font-weight: bold;
+}
+
+.section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+#about .container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.typewriter {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 1.1em;
+    color: rgb(211, 241, 211); 
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+}
+
+#typewriter-text {
+    display: inline-block; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    direction: rtl; 
+    animation: typing 5s steps(50, end), blink-caret 0.75s step-end infinite; 
+    border-right: 2px solid green; 
+}
+
+@keyframes typing {
+    from {
+        width: 0; 
+    }
+    to {
+        width: 100%; 
+    }
+}
+@keyframes blink-caret {
+    from, to {
+        border-right-color: transparent;
+    }
+    50% {
+        border-right-color: green;
+    }
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    margin: 10px 0;
+}
+
+.project p {
+    margin: 5px 0 15px;
+}
+.skills-logos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.skills-logos a {
+    display: block;
+    width: 100px; 
+    height: 60px; 
+    background-color: hsl(0, 0%, 100%); 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    text-align: center; 
+    padding: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.skills-logos a img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+}
+
+.skills-logos a:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    opacity: 0.9; 
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8e8bf4;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+s
+form button:hover {
+    background-color: #6a11cb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    #about .container {
+        padding: 10px;
+        max-width: 90%; /* Adjusts width for smaller screens */
+    }
+
+    .typewriter {
+        font-size: 1em; /* Scales font for smaller devices */
+        line-height: 1.6;
+    }
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; 
+    src: url('path-to-font-file') format('woff2');
+}
+
