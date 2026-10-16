@@ -1,0 +1,7 @@
+# Editor local-history snapshots
+.history/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
